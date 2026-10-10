@@ -1,93 +1,343 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1536546697662752');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1536546697662752&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
-<!-- This site is hosted on Netlify. Anyone can build and deploy a site
-     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=f62849fc-0230-4779-950e-aca6c0dbae55
-     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PANKAJ BHARDWAJ</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+    <title>Pankaj Bhardwaj | Trading Community</title>
+    <meta name="description" content="Join the trading community for market analysis and educational updates.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #071b16, #102c24, #07130f);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px 15px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            padding: 35px 28px;
+            text-align: center;
+            background: #11271f;
+            border: 1px solid #315443;
+            border-radius: 20px;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, .4);
+        }
+
+        .logo {
+            width: 115px;
+            height: 115px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #e8bd56;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 30px;
+            line-height: 1.3;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        h1 span {
+            color: #e8bd56;
+        }
+
+        h2 {
+            font-size: 15px;
+            color: #e8bd56;
+            letter-spacing: 1.5px;
+            margin-bottom: 15px;
+        }
+
+        .sub {
+            color: #d0ddd5;
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 16px 12px;
+            background: linear-gradient(90deg, #e6b746, #f5d77c);
+            color: #132319;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 800;
+            letter-spacing: .4px;
+            border-radius: 9px;
+            transition: .2s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(232, 189, 86, .2);
+        }
+
+        .trust {
+            margin: 25px 0;
+            padding: 17px 12px;
+            background: #19372b;
+            border: 1px solid #315443;
+            border-radius: 10px;
+        }
+
+        .trust p {
+            font-size: 14px;
+            color: #e5eee8;
+            line-height: 1.9;
+        }
+
+        .points {
+            list-style: none;
+            text-align: left;
+            margin: 25px 0;
+        }
+
+        .points li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #e4ece6;
+            padding: 12px 0;
+            border-bottom: 1px solid #294336;
+        }
+
+        .points li:last-child {
+            border-bottom: none;
+        }
+
+        .check {
+            display: inline-flex;
+            flex-shrink: 0;
+            justify-content: center;
+            align-items: center;
+            width: 23px;
+            height: 23px;
+            background: #244b35;
+            color: #8ee0a5;
+            border-radius: 50%;
+            font-weight: bold;
+        }
+
+        .timer {
+            margin-top: 24px;
+            padding: 15px 10px;
+            color: #f3d479;
+            background: #253b2d;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .proof {
+            margin: 17px 0;
+            font-size: 13px;
+            color: #bdcfc2;
+        }
+
+        .risk {
+            margin-top: 25px;
+            padding: 13px;
+            background: #2b2920;
+            border-radius: 8px;
+            color: #f1d6a0;
+            font-size: 12px;
+            line-height: 1.8;
+        }
+
+        .footer {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid #315443;
+            font-size: 12px;
+            line-height: 1.8;
+            color: #bdcfc2;
+        }
+
+        .footer a {
+            color: #e8bd56;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 18px 12px;
+                align-items: flex-start;
+            }
+
+            .container {
+                padding: 28px 18px;
+                border-radius: 15px;
+            }
+
+            .logo {
+                width: 95px;
+                height: 95px;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+
+            h2 {
+                font-size: 13px;
+                letter-spacing: 1px;
+            }
+
+            .sub {
+                font-size: 14px;
+            }
+
+            .btn {
+                font-size: 13px;
+                padding: 15px 8px;
+            }
+
+            .points li {
+                font-size: 13px;
+            }
+        }
+    </style>
+
+    <!-- Meta Pixel -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}
+        (window,document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+
+        fbq('init', '1536546697662752');
+        fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel -->
 </head>
+
 <body>
 
-<div class="container">
+    <main class="container">
 
-<img src="pkk.jpg" class="logo">
+        <img src="pkk.jpg"
+             alt="Pankaj Bhardwaj"
+             class="logo">
 
-<h1>𝗣𝗔𝗡𝗞𝗔𝗝 BHARDWAJ™</h1>
-<h2>NIFTY • BANKNIFTY • OPTIONS</h2>
+        <h1>PANKAJ <span>BHARDWAJ™</span></h1>
 
-<p class="sub">Daily Intraday Trading Signals & Analysis</p>
+        <h2>NIFTY • BANKNIFTY • OPTIONS</h2>
 
-<a href="https://t.me/+8i3nWHtP8oVjYTJl"
-class="btn"
-target="_blank"
-onclick="trackSubscribe()">
-JOIN NOW FOR FREE TELEGRAM
-</a>
+        <p class="sub">
+            Daily Intraday Trading Signals &amp; Analysis
+        </p>
 
-<div class="trust">
-✔ Trusted by 11,000+ Traders <br>
-✔ Daily Consistent Setups
-</div>
+        <a href="https://telegram.me/+dIHF0Rcb4K04NTk1"
+           class="btn"
+           target="_blank"
+           rel="noopener noreferrer"
+           onclick="trackSubscribe()">
+            JOIN NOW FOR FREE TELEGRAM
+        </a>
 
-<ul class="points">
-<li>✔ 5–7 High Probability Trades</li>
-<li>✔ Exact Entry, SL & Target</li>
-<li>✔ Beginner Friendly Guidance</li>
-<li>✔ Live Market Updates</li>
-</ul>
+        <div class="trust">
+            <p>✔ Trusted by 11,000+ Traders</p>
+            <p>✔ Daily Market Analysis</p>
+        </div>
 
-<a href="https://t.me/+8i3nWHtP8oVjYTJl"
-class="btn"
-target="_blank"
-onclick="trackSubscribe()">
-JOIN NOW FOR FREE TELEGRAM
-</a>
+        <ul class="points">
+            <li>
+                <span class="check">✓</span>
+                Educational Market Setups
+            </li>
+            <li>
+                <span class="check">✓</span>
+                Entry, Stop-Loss &amp; Target Explanations
+            </li>
+            <li>
+                <span class="check">✓</span>
+                Beginner-Friendly Guidance
+            </li>
+            <li>
+                <span class="check">✓</span>
+                Live Market Updates
+            </li>
+        </ul>
 
-<div class="timer">⏳ Free Access Closing Soon</div>
+        <a href="https://telegram.me/+dIHF0Rcb4K04NTk1"
+           class="btn"
+           target="_blank"
+           rel="noopener noreferrer"
+           onclick="trackSubscribe()">
+            JOIN NOW FOR FREE TELEGRAM
+        </a>
 
-<div class="proof">📈 Limited Seats • Active Community</div>
+        <div class="timer">
+            ⏳ Join the Trading Community
+        </div>
 
-<p class="risk">⚠ Market investments are subject to risk</p>
+        <div class="proof">
+            📈 Learn • Analyze • Trade Responsibly
+        </div>
 
-<div class="footer">
-🚀 Ads Managed by <a href="https://telegram.me/+MD_D7VitLrQ1NjE9" target="_blank">Suresh Ad Agency</a>
-</div>
+        <p class="risk">
+            ⚠ Market investments are subject to risk.
+            Trading in securities and derivatives can lead
+            to financial losses. No profits are guaranteed.
+            Please research independently before investing.
+        </p>
 
-</div>
-<script>
-let subscribeTracked = false;
+        <footer class="footer">
+            🚀 Ads Managed by
+            <a href="https://telegram.me/+MD_D7VitLrQ1NjE9"
+               target="_blank"
+               rel="noopener noreferrer">
+                Suresh Ad Agency
+            </a>
+        </footer>
 
-function trackSubscribe() {
+    </main>
 
-    if (!subscribeTracked) {
-        fbq('track', 'Subscribe');
-        subscribeTracked = true;
-    }
+    <script>
+        let subscribeTracked = false;
 
-}
-</script>
+        function trackSubscribe() {
+            if (
+                !subscribeTracked &&
+                typeof window.fbq === "function"
+            ) {
+                window.fbq('track', 'Subscribe');
+                subscribeTracked = true;
+            }
+        }
+    </script>
 
 </body>
-</html><script async src="/.netlify/scripts/hud?variant=public" data-nf-variant="public" data-netlify-site-id="f62849fc-0230-4779-950e-aca6c0dbae55" data-app-host="app.netlify.com"></script>
+</html>
