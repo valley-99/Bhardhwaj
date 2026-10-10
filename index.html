@@ -1,12 +1,14 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>SEBI | RA MOHIT AGARWAL  Trading Community</title>
-    <meta name="description" content="Join the trading community for market analysis and educational updates.">
+    <title>SEBI | RA MOHIT AGARWAL Trading Community</title>
+    <meta name="description" content="Join the educational community for market analysis and informational updates.">
+
+    <meta name="theme-color" content="#071b16">
 
     <style>
         * {
@@ -52,6 +54,7 @@
             font-weight: 800;
             letter-spacing: 1px;
             margin-bottom: 12px;
+            overflow-wrap: anywhere;
         }
 
         h1 span {
@@ -83,12 +86,17 @@
             font-weight: 800;
             letter-spacing: .4px;
             border-radius: 9px;
-            transition: .2s ease;
+            transition: transform .2s ease, box-shadow .2s ease;
         }
 
         .btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(232, 189, 86, .2);
+        }
+
+        .btn:focus-visible {
+            outline: 2px solid #ffffff;
+            outline-offset: 4px;
         }
 
         .trust {
@@ -207,6 +215,7 @@
             h2 {
                 font-size: 13px;
                 letter-spacing: 1px;
+                line-height: 1.6;
             }
 
             .sub {
@@ -222,25 +231,47 @@
                 font-size: 13px;
             }
         }
+
+        @media (prefers-reduced-motion: reduce) {
+            .btn {
+                transition: none;
+            }
+        }
     </style>
 
-   <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1875226753645270');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1875226753645270&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s) {
+            if(f.fbq)return;
+            n=f.fbq=function() {
+                n.callMethod ?
+                n.callMethod.apply(n,arguments) : n.queue.push(arguments)
+            };
+            if(!f._fbq)f._fbq=n;
+            n.push=n;
+            n.loaded=true;
+            n.version='2.0';
+            n.queue=[];
+            t=b.createElement(e);
+            t.async=true;
+            t.src=v;
+            s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s);
+        }(window, document, 'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+
+        fbq('init', '1875226753645270');
+        fbq('track', 'PageView');
+    </script>
+
+    <noscript>
+        <img height="1" width="1"
+             style="display:none"
+             src="https://www.facebook.com/tr?id=1875226753645270&ev=PageView&noscript=1"
+             alt="">
+    </noscript>
+    <!-- End Meta Pixel Code -->
+
 </head>
 
 <body>
@@ -248,10 +279,10 @@ src="https://www.facebook.com/tr?id=1875226753645270&ev=PageView&noscript=1"
     <main class="container">
 
         <img src="images/images.jpg"
-             alt="Pankaj Bhardwaj"
+             alt="Mohit Agarwal"
              class="logo">
 
-        <h1>SEBI<span> RA MOHIT AGARWAL™</span></h1>
+        <h1>SEBI <span>RA MOHIT AGARWAL™</span></h1>
 
         <h2>NIFTY • BANKNIFTY • OPTIONS</h2>
 
@@ -259,15 +290,14 @@ src="https://www.facebook.com/tr?id=1875226753645270&ev=PageView&noscript=1"
             Daily Intraday Trading Signals &amp; Analysis
         </p>
 
-        
-<a href="https://t.me/+8i3nWHtP8oVjYTJl"
-   class="btn"
-   target="_blank"
-   rel="noopener noreferrer"
-   onclick="trackSubscribe()">
-    JOIN NOW FOR FREE TELEGRAM
-</a>
-
+        <!-- First Telegram Button: Updated Link -->
+        <a href="https://t.me/+8i3nWHtP8oVjYTJl"
+           class="btn"
+           target="_blank"
+           rel="noopener noreferrer"
+           onclick="trackSubscribe()">
+            JOIN NOW FOR FREE TELEGRAM
+        </a>
 
         <div class="trust">
             <p>✔ Trusted by 11,000+ Traders</p>
@@ -277,38 +307,40 @@ src="https://www.facebook.com/tr?id=1875226753645270&ev=PageView&noscript=1"
         <ul class="points">
             <li>
                 <span class="check">✓</span>
-                Educational Market Setups
+                <span>Educational Market Setups</span>
             </li>
+
             <li>
                 <span class="check">✓</span>
-                Entry, Stop-Loss &amp; Target Explanations
+                <span>Entry, Stop-Loss &amp; Target Explanations</span>
             </li>
+
             <li>
                 <span class="check">✓</span>
-                Beginner-Friendly Guidance
+                <span>Beginner-Friendly Guidance</span>
             </li>
+
             <li>
                 <span class="check">✓</span>
-                Live Market Updates
+                <span>Live Market Updates</span>
             </li>
         </ul>
 
-       
-<a href="https://t.me/+8i3nWHtP8oVjYTJl"
-   class="btn"
-   target="_blank"
-   rel="noopener noreferrer"
-   onclick="trackSubscribe()">
-    JOIN NOW FOR FREE TELEGRAM
-</a>
-
+        <!-- Second Telegram Button: Updated Link -->
+        <a href="https://t.me/+8i3nWHtP8oVjYTJl"
+           class="btn"
+           target="_blank"
+           rel="noopener noreferrer"
+           onclick="trackSubscribe()">
+            JOIN NOW FOR FREE TELEGRAM
+        </a>
 
         <div class="timer">
-            ⏳ Join the Trading Community
+            Join the Trading Community
         </div>
 
         <div class="proof">
-            📈 Learn • Analyze • Trade Responsibly
+            Learn • Analyze • Trade Responsibly
         </div>
 
         <p class="risk">
